@@ -18,7 +18,7 @@ def show_homepage():
     """Loads snow when the page is opened...using streamlit docs"""
     st.snow()
     st.markdown("<h1 style='text-align: center; color: green;'>Dispensary Map - Boston</h1>", unsafe_allow_html=True)
-    st.image("/Users/gabehorwitz/PycharmProjects/InClass/Assignments/main_image")
+    st.image("main_image")
     st.markdown("<h4 style='text-align: center;'>by Gabe Horwitz</h4>", unsafe_allow_html=True)
 
     """Additional information"""
@@ -31,7 +31,7 @@ def show_homepage():
 """@st.cache_data was recommended on streamlit website"""
 @st.cache_data
 def load_data():
-    data = pd.read_excel('/Users/gabehorwitz/PycharmProjects/InClass/Assignments/Cannabis_Registry.xlsx')
+    data = pd.read_excel('Cannabis_Registry.xlsx')
     return data
 
 df = load_data()
